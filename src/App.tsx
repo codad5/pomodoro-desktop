@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/tauri";
 import { Button, Flex, Text } from "@chakra-ui/react";
 import { sendNotification } from "@tauri-apps/api/notification";
@@ -52,8 +51,7 @@ function App() {
         } else if (time === 0) {
           sendNotification({
            title: `Time's up!`,
-           body: `Congrats on completing a session!🎉`,
-           icon : reactLogo
+           body: `Congrats on completing a session!🎉`
          });
           clearInterval(interval);
         }
